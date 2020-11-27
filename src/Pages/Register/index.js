@@ -2,8 +2,6 @@ import React, { useRef, useState, useContext } from 'react';
 import Input from '../../components/Input/index';
 import * as Yup from 'yup';
 import Button from '../../components/Button';
-import api from '../../services/api';
-import { useHistory } from 'react-router-dom';
 
 import {
     Container,
@@ -15,11 +13,7 @@ import {
 } from './styles';
 
 const Register = () => {
-  const history = useHistory();
   const formRef = useRef(null);
-  const [isErrored, setIsErrored] = useState(false);
-
-  console.log('Login');
 
   async function handleSubmit(data, { reset }) {
     try {
@@ -45,7 +39,6 @@ const Register = () => {
 
             err.inner.forEach(error => {
               validationErrors[error.path] = error.message;
-              setIsErrored(true);
             });
           
             formRef.current?.setErrors(validationErrors);

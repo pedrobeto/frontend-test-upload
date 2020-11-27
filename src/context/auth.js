@@ -12,8 +12,6 @@ export const AuthProvider = ({children}) => {
             const storagedUser = localStorage.getItem('app:user');
             const storagedToken = localStorage.getItem('app:token');
             
-            console.log(storagedUser, storagedToken);
-
             if(storagedToken && storagedUser) {
                 setUser(JSON.parse(storagedUser));
             }
@@ -41,7 +39,7 @@ export const AuthProvider = ({children}) => {
             console.log(response.data);
 
         } catch (err) {
-            alert('Erro na autenticação, tente novamente.');
+            console.log(err.message);
         }    
     }
 

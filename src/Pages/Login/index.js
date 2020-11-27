@@ -18,8 +18,6 @@ const Login = () => {
   const { signed, signIn, user } = useContext(AuthContext);
   const formRef = useRef(null);
 
-  console.log(signed);
-
   async function handleSubmit(data, { reset }) {
     try {
         const schema = Yup.object().shape({

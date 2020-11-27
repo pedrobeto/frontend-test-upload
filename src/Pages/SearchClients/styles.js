@@ -6,6 +6,7 @@ export const Container = styled.div`
     flex: 1;
     height: 100vh;
     color: #fff;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 `;
@@ -96,15 +97,6 @@ export const Menu = styled.div`
     }
 `;
 
-export const WrapperAppFunctions = styled.div`
-    display: flex;
-    align-self: center;
-    margin: 20px 20px;
-    width: 80%;
-    color: #e5e5e5;
-    flex-wrap: wrap;
-`;
-
 export const GiantCardLink = styled(CustomLink)`
     display: flex;
     flex: 1;
@@ -162,7 +154,7 @@ export const WrapperClients = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 20px 0;
+    height: 400px;
 `;
 
 export const SmallCard = styled.div`

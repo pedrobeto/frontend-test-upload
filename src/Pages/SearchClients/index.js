@@ -21,7 +21,6 @@ import api from '../../services/api';
   useEffect(() => {
       (async () => {
           const { data } = await api.get('/user');
-          console.log(data);
 
           setClients(data);
     })();
@@ -31,10 +30,8 @@ import api from '../../services/api';
   async function handleSearch(data, { reset }) {
     try {
         setClients(data);
-        console.log(data);
         reset();
     } catch (err) {
-        console.log(err.messages);
         return; 
     }
   }
@@ -48,7 +45,7 @@ import api from '../../services/api';
 
             <Menu>
                 <ul>
-                    <li><Link to="/profile">Meu Perfil</Link></li>
+                    <li><Link to={`/profile/${user._id}`}>Meu Perfil</Link></li>
                     <li><Link to="/search">Clientes</Link></li>
                 </ul>
             </Menu>

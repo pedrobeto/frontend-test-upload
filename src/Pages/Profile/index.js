@@ -31,7 +31,7 @@ const Profile = () => {
   return (
       <Container>
           <DashMenuArea>
-            <img src="./user-avatar.svg" alt=""/>
+            <img src="./user-avatar.svg" alt="user_avatar"/>
             <p>{user.name}</p>
 
             <Menu>
@@ -45,8 +45,8 @@ const Profile = () => {
           <ContentArea>
             <p>perfil</p>
             {userSearched && 
-                <ProfileCard>
-                <img src="./user-avatar.svg" alt=""/>
+                <ProfileCard key={user._id}>
+                <img src="./user-avatar.svg" alt="user_avatar"/>
                 <TextArea>
                     <p><strong>Nome: </strong>{userSearched.name}</p>
                     <p><strong>RG: </strong>{userSearched.rg}</p>
