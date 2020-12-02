@@ -15,7 +15,6 @@ import {
 import AuthContext from '../../context/auth';
 
 const Login = () => {
-  const { signed, signIn, user } = useContext(AuthContext);
   const formRef = useRef(null);
 
   async function handleSubmit(data, { reset }) {
@@ -52,6 +51,18 @@ const Login = () => {
         } 
     }
   }
+
+  useEffect(() => {
+    async function checkLogged() {
+        const { signed, signIn, user } = useContext(AuthContext);
+
+        if (user) {
+            history.push('/dashboard');
+        }
+    }
+
+    checkLogged();
+  },[]);
 
   return (
       <Container>
