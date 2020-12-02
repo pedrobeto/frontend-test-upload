@@ -31,9 +31,7 @@ const Login = () => {
             abortEarly: false,
         });
         
-        signIn(data.email, data.password);
-
-        console.log(user);
+        const userLogged = await signIn(data.email, data.password);
 
         formRef.current?.setErrors({});
 

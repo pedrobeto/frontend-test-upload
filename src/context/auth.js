@@ -36,8 +36,6 @@ export const AuthProvider = ({children}) => {
 
             api.defaults.headers.Authorization = `${token}`;
 
-            console.log(response.data);
-
         } catch (err) {
             console.log(err.message);
         }    

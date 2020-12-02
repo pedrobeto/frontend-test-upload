@@ -28,8 +28,6 @@ const Register = () => {
             abortEarly: false,
         });
 
-        console.log(data);
-
         formRef.current?.setErrors({});
 
         reset();

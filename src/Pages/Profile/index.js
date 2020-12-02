@@ -21,7 +21,6 @@ const Profile = () => {
 
     const { data } = await api.get(`/user/${user._id}`);
         const x = data;
-        console.log(x.name);
         setUserSearched(x);
     }
 
